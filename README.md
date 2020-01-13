@@ -2293,4 +2293,41 @@ document.getElementById("ElementName").style.border = "1px black solid"
 ```
 ##### Lecture 100 JavaScript Events Intro
 ##### Lecture 101 Events
+- onClick
+- onChange,etc.
+
+##### Lecture 102 Event Listeners
+- mouseover,etc.
+
+##### Lecture 103 Debugging JS from the Browser
+
+##### Lecture 104 Logic Vs Syntax Errors
+
+##### Lecture 105 Adding Properties to Objects
+
+##### Lecture 105 A Different Way to Add Methods
+
+##### Lecture 106 Getters and Setters
+
+```
+Getter gets the value as property
+Setter allows to update
+ ```
+ ```
+ var person = {
+    firstName : "Jason",
+    lastName : "Myers",
+    myName() {
+        return firstName + " " + this.lastName
+    }
+}
+ ```
+ 
+##### Lecture 107 Construcors
+
+##### Lecture 108 Prototypes
+
+##### Lecture 109 Code Linting
+
+
 
