@@ -2039,5 +2039,258 @@ arr.join(" | ")
  "hi | Bye | Morning | Hello"
 ```
 #### Lecture 85 Merging Arrays
+ 
+ ```
+  var arr1 = [1,2,3,4]
+    var arr2 = [5,6,7,8]
+newArr = arr1.concat(arr2)
 
+Array (8)[ 1,2,3,4,5,6,7,8 ]
+
+var arr1 = [1,2,3,4]
+    var arr2 = [5,6,7,8]
+newArr = arr2.concat(arr1)
+
+Array (8)[ 5,6,7,8,1,2,3,4 ]
+ 
+ ```
+#### Lecture 86 Sorting of a String Array
+```
+ var arr = ["b","a","c"]
+   arr.sort()
+
+Array (3)[ a,b,c ]
+
+   var arr = ["c","a","b"]
+   arr.reverse()
+
+Array (3)[ "b","a","c" ]
+
+```
+```
+  var arr = ["b","a","c"]
+  arr.sort()
+  arr.reverse()
+  
+Array (3)[ "c","b","a" ]
+
+
+```
+
+**Reverse function takes the whole array and just flips it and prints it backward so in order to print it in a sorted reverse order,
+we should first sort the array string and then reverse it**
+
+#### Lecture 87 Sorting of a Number Array
+sort() function does not work good with the numbers because it deals with a character like a string
+
+#### Lecture 88 Array forEach and Map
+ forEach doesn,t return anything and the map method returns an array
+
+```
+var num = [1,2,3,4,5]
+   num.forEach(test)
+   function test(value,index,array) {
+     console.log(index + ": " + value + "\n")
+   }
+   
+0: 1
+1: 2
+2: 3
+3: 4
+4: 5
+```
+```
+var num = [1,2,3,4,5]
+   num.forEach(test)
+   function test(value,index,array) {
+     console.log(index + ": " + value + "\n" + array)
+   }
+
+0: 1
+1,2,3,4,5
+1: 2
+1,2,3,4,5
+2: 3
+1,2,3,4,5
+3: 4
+1,2,3,4,5
+4: 5
+1,2,3,4,5
+```
+```
+var num = [1,2,3,4,5]
+   num.forEach(test)
+   function test(value,index,array) {
+     console.log(index + ": " + value + " & " + array[index] + "\n" )
+   }
+   
+0: 1 & 1
+1: 2 & 2
+2: 3 & 3
+3: 4 & 4
+4: 5 & 5
+```
+```
+var num = [1,2,3,4,5]
+   var newNum
+   newNum = num.map(test)
+   function test(value, index ,array){
+     newNum = index + ": " + value + " & " +array[index] + "\n"
+     return newNum
+   }
+   
+Array (5)[
+0: "0: 1 & 1↵"
+1: "1: 2 & 2↵"
+2: "2: 3 & 3↵"
+3: "3: 4 & 4↵"
+4: "4: 5 & 5↵"
+]
+```
+```
+var num = [1, 2, 3, 4 ,5]
+var newNum = ""
+num.forEach(test)
+function test(value, index, array){
+  newNum = newNum + index + " : " + value + " & " + array[index] + "\n"
+}
+undefined
+newNum
+"0 : 1 & 1
+1 : 2 & 2
+2 : 3 & 3
+3 : 4 & 4
+4 : 5 & 5
+"
+```
+#### Lecture 89 Array Filter
+ It is callback function which takes a value index and the array 
+ 
+```
+ var num = [1, 5, 10, 11, 12, 15]
+ var even = num.filter(isEven)
+ function isEven(value,index,array){
+ return value % 2 == 0
+}
+
+even
+
+Array (2)[
+0: 10
+1: 12
+]
+```
+#### Lecture 90 Date Basics
+Date is a snapshot of the moment in time
+
+```
+var newDate = new Date()
+newDate
+Mon Jan 13 2020 11:03:11 GMT+0530 (India Standard Time)
+
+var newDate = new Date()
+newDate
+Mon Jan 13 2020 11:03:21 GMT+0530 (India Standard Time)
+```
+#### Lecture 91 Getting Parts of a Date
+
+```
+newDate.getUTCFullYear()
+2020
+
+newDate.getUTCMonth()
+0
+//Month starts with zero(0)
+
+newDate.getUTCDay()
+1
+
+newDate.getDate()
+13
+
+newDate.getHours()
+11
+
+var today = newDate.getMonth() +  "-" + newDate.getDate() + " - " + newDate.getFullYear()
+
+today
+
+"0-13 - 2020"
+
+newDate.getHours()
+11
+
+newDate.getUTCMinutes()
+45
+
+newDate.getMinutes()
+15
+
+newDate.getMilliseconds()
+884
+
+newDate
+Mon Jan 13 2020 11:15:17 GMT+0530 (India Standard Time)
+
+```
+#### Lecture 92 Setting new Dates
+```
+Mon Jan 13 2020 11:15:17 GMT+0530 (India Standard Time)
+var newDate = new Date()
+
+Mon Jan 13 2020 11:21:40 GMT+0530 (India Standard Time)
+newDate.setFullYear(2021)
+1610517100685
+
+newDate
+Wed Jan 13 2021 11:21:40 GMT+0530 (India Standard Time)
+```
+#### Lecture 93 Running JavaScript from a WebPage
+ JavaScript executes from top to bottom
+ 
+#### Lecture 94 Minified JavaScript// minified JavaScript
+ ```
+ // Normal JavaScript
+ 
+ var thing = "Hello world"
+ document.getElementById("sample").innerHTML = thing
+
+// Minified JavaScript
+ var thing="Hello world";document.getElementById("sample").innerHTML=thing;
+
+ // it is like the minified JSON and it is just a way of conserving space
+
+```
+##### Lecture 95 The DOM(Document Object Model)
+
+```
+The use of the dom fr javascript is to access the elements of the HTML
+with the DOM JavaScript can change all the elements on the page, it also can react to HTML events
+```
+
+##### Lecture 96 Finding Elements
+
+##### Lecture 97 Relationships
+```
+Parent - child - Sibling - relationship
+```
+
+##### Lecture 98 Changing HTML
+inner HTML is going to change the contents inside the HTML
+
+```
+  - getElementById
+  - document.createElement
+  - appendChild
+  - insertBefore
+  - removeChild
+```
+
+##### Lecture 99 Changing Style
+```
+document.getElementById("ElementName").style.color = "blue"
+document.getElementById("ElementName").style.border = "1px black solid"
+```
+##### Lecture 100 JavaScript Events Intro
+##### Lecture 101 Events
 
