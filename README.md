@@ -2329,5 +2329,48 @@ Setter allows to update
 
 ##### Lecture 109 Code Linting
 
+```
+//Getters and Setters
 
+var person = {
+    firstName : "Jason",
+    lastName : "Myers",
+    get myName() {
+        return firstName + " " + this.lastName
+    },
+    set myName(value){
+        var name = value.split(" ")
+        this.firstName = name[0]
+        this.lastName = name[1]
+    }
+}
+
+// Constructors
+
+var me = {
+    firstName : "Jason",
+    lastName : "Myers",
+    myName(){
+        console.log(this.firstName + " " + this.lastName)
+    }
+}
+
+var bestFriend = {
+    firstName : "Bob",
+    lastName : "jones",
+    myName(){
+        console.log(this.firstName + " " + this.lastName)
+    }
+}
+/* constructor method is basically
+a blueprint of a method */
+
+function Person(first,last){
+firstName = first
+lastName = last
+this.myName = function (){
+    console.log(this.firstName + " " + this.lastName)
+}
+}
+```
 
