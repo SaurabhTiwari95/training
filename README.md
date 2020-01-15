@@ -290,6 +290,62 @@ var square = ""
         }
         console.log(square)
 ```
+### Assignment Office(15/01/2020)
+```
+       var b = ""
+        for (var i = 1; i < n; i++) {
+          for (var j = 1; j < a; j++) {
+            if (i <= j) {
+              b = b.concat("*")
+            }
+            else {
+              b = b.concat(" ")
+            }
+          }
+          b = b.concat("\n")
+        }
+        console.log(b)
+        
+*********
+ ********
+  *******
+   ******
+    *****
+     ****
+      ***
+       **
+        *
+        
+        
+        
+          var n = 10
+          var a = 10
+          var b = ""
+          for (var i = 1; i < n; i++) {
+            for (var j = 1; j < a; j++) {
+              if (i + j >= n) {
+                b = b.concat("*")
+              }else {
+                b = b.concat(" ")
+              }
+            }
+            b = b.concat("\n")
+          }
+            console.log(b)
+    
+        *
+       **
+      ***
+     ****
+    *****
+   ******
+  *******
+ ********
+*********
+
+
+```
+ 
  ### Lecture 54 While Loop
  ```
  var i = 0;
